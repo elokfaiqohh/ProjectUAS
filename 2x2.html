@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rumus Determinan Matriks 2x2</title>
+  <link rel="stylesheet" href="Determinan.css">
+  <link rel="website icon" type="png" href="assets/unesa.png">
+  <style>
+	.main{
+			height: 0;
+		}
+	
+  </style>
+</head>
+<body>
+	<video id="vid2" autoplay loop muted plays-inline>
+	  <source src="assets/background.mp4" >
+	</video>
+	<nav><p>D e t e r m i n a n</p></nav>
+	<div class="isi2">
+			
+		<h2>Rumus Determinan Matriks 2x2</h2><br>
+		<p>Rumus determinan matriks 2x2 adalah:</p><br>
+		<table>
+			<tbody  class="ordo">
+				<tr>
+					<td>a<sub>11</sub> </td>
+					<td>a<sub>12</sub> </td>
+				</tr>
+				<tr>
+					<td>a<sub>21</sub> </td>
+					<td>a<sub>22</sub> </td>
+				</tr>
+			</tbody>
+		</table>
+		<br><br><p>det = a<sub>11</sub> * a<sub>22</sub> - a<sub>12</sub> * a<sub>21</sub></p><br>
+		<p>Masukkan nilai matriks:</p><br>
+		<table>
+			<tr>
+				<td><input  id="a11"></td>
+				<td><input  id="a12"></td>
+			</tr>
+			<tr>
+				<td><input  id="a21"></td>
+				<td><input  id="a22"></td>
+			</tr>
+		</table>
+		<button onclick="hitungDeterminan()">Hitung Determinan</button>
+		<p>Hasil determinan matriks adalah: <span id="hasil"></span></p>
+
+	</div>
+	
+    <div class="container-fluid main" style="padding-bottom: 120px;">
+		<div class="text-center main-text">
+		  <div class="c2a-btn footer-c2a-btn">
+			<div class="btn-group btn-group-lg" role="group" aria-label="Call to action">
+			  <a type="button" class="btn btn2 btn-default btn-lg" href="index.html" style="border-radius: 50px 0 0 50px">Home</a>
+			  <span class="btn-circle btn-or">or</span>
+			  <a type="button" class="btn btn3 btn-default btn-lg" href="3x3.html" style="border-radius: 0 50px 50px 0">3 x 3</a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <footer><p> copyright & copy &copy;kel2 elok fila chika amel</p></footer>
+
+	<script>
+		function hitungDeterminan() {
+			let a11 = parseInt(document.getElementById("a11").value);
+			let a12 = parseInt(document.getElementById("a12").value);
+			let a21 = parseInt(document.getElementById("a21").value);
+			let a22 = parseInt(document.getElementById("a22").value);
+
+			let determinan = a11 * a22 - a12 * a21;
+
+			document.getElementById("hasil").innerHTML = determinan;
+		}
+	</script>
+</body>
+</html>
